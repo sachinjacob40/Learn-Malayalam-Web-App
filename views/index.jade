@@ -1,0 +1,88 @@
+doctype html
+html
+  title W3.CSS Template
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato')
+  link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  style.
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-anchor,.fa-coffee {font-size:200px}
+  body
+    // Navbar
+    .w3-top
+      .w3-bar.w3-red.w3-card.w3-left-align.w3-large
+        a.w3-bar-item.w3-button.w3-hide-medium.w3-hide-large.w3-right.w3-padding-large.w3-hover-white.w3-large.w3-red(href='javascript:void(0);', onclick='myFunction()', title='Toggle Navigation Menu')
+          i.fa.fa-bars
+        a.w3-bar-item.w3-button.w3-padding-large.w3-white(href='#') Home
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='/temp1') Chapters
+        a.w3-bar-item.w3-button.w3-hide-small.w3-padding-large.w3-hover-white(href='#') Contact
+      // Navbar on small screens
+      #navDemo.w3-bar-block.w3-white.w3-hide.w3-hide-large.w3-hide-medium.w3-large
+        a.w3-bar-item.w3-button.w3-padding-large(href='#') Chapters
+        a.w3-bar-item.w3-button.w3-padding-large(href='#') Link 2
+        a.w3-bar-item.w3-button.w3-padding-large(href='#') Link 3
+        a.w3-bar-item.w3-button.w3-padding-large(href='#') Link 4
+    // Header
+    header.w3-container.w3-teal.w3-center(style='padding:128px 16px')
+      h1.w3-margin.w3-jumbo Aksharamala
+      p.w3-xlarge Let's get learning!
+    // First Grid
+    .w3-row-padding.w3-padding-64.w3-container
+      .w3-content
+        .w3-twothird
+          h1 About Malayalam
+          h5.w3-padding-32
+            | Malayalam is a Dravidian language spoken in India, predominantly in the state of Kerala. It was developed to the current form mainly by the influence of the poet Thunchaththu Ezhuthachan in the 16th century. Malayalam has official language status in the state of Kerala and in the union territories of Lakshadweep and Puducherry.The word Malayalam originated from the Malayalam words malai or mala, meaning "hill," and elam, meaning region"; Malayalam thus translates directly as "hill region." The term originally referred to the land of the Chera dynasty, and only later became the name of its language.
+            p
+              | Malayalam script consists of a total of 578 characters. The script contains 52 letters including 16 vowels and 36 consonants, which forms 576 syllabic characters.
+        .w3-third.w3-center
+          img(src='aksharamala.png', alt='Aksharamala', height='400', width='400')
+    // Footer
+    footer.w3-container.w3-padding-64.w3-center.w3-opacity
+      .w3-xlarge.w3-padding-32
+        i.fa.fa-facebook-official.w3-hover-opacity
+        i.fa.fa-instagram.w3-hover-opacity
+        i.fa.fa-snapchat.w3-hover-opacity
+        i.fa.fa-pinterest-p.w3-hover-opacity
+        i.fa.fa-twitter.w3-hover-opacity
+        i.fa.fa-linkedin.w3-hover-opacity
+      p
+        | Powered by 
+        a(href='https://www.w3schools.com/w3css/default.asp', target='_blank') w3.css
+    script.
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+      } else {
+      x.className = x.className.replace(" w3-show", "");
+      }
+      }
+    #id01.w3-modal
+      .w3-modal-content.w3-card-4.w3-animate-zoom(style='max-width:600px')
+        .w3-center
+          br
+          span.w3-button.w3-xlarge.w3-hover-red.w3-display-topright(onclick="document.getElementById('id01').style.display='none'", title='Close Modal') ×
+          h1 Contact Form
+          form.w3-container(action='/action_page.php')
+            .w3-section
+              label
+                b
+              input.w3-input.w3-border.w3-margin-bottom.w3-card-2(type='text', placeholder='Enter Name', name='usrname', required='')
+              label
+                b
+              input.w3-input.w3-border.w3-card-2.w3-margin-bottom(type='Email address', placeholder='Email address', name='psw', required='')
+              label
+                b
+              input.w3-input.w3-border.w3-card-2.w3-margin-bottom(type='Subject', placeholder='Subject', name='psw', required='')
+              label
+                b
+              input.w3-input.w3-border.w3-card-2.w3-margin-bottom(type='Message', placeholder='Message', name='psw', required='')
+              button.w3-button.w3-block.w3-green.w3-section.w3-padding(onclick="document.getElementById('id01').style.display='none'", type='submit') Submit
+          .w3-container.w3-border-top.w3-padding-16.w3-light-grey
+            button.w3-button.w3-red(onclick="document.getElementById('id01').style.display='none'", type='button') Cancel
